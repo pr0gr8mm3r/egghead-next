@@ -140,8 +140,8 @@ const PricingCta = () => {
         onSubmit={formik.handleSubmit}
         className="flex flex-col items-center w-full h-full"
       >
-        <h1 className="sm:text-2xl text-xl leading-tighter font-medium text-center sm:max-w-[17ch]">
-          Ready to take your career to the next level?
+        <h1 className="sm:text-2xl text-xl leading-tighter font-medium text-center sm:max-w-[17ch] pb-5">
+          Jetzt loslegen
         </h1>
         <div className="w-full max-w-md">
           {!pppCouponIsApplied &&
@@ -154,10 +154,10 @@ const PricingCta = () => {
                 />
               </div>
             )}
-          <div className="flex items-end justify-center w-full py-5">
+          {/* <div className="flex items-end justify-center w-full py-5">
             <PlanPrice pricesLoading={pricesLoading} plan={currentPlan} />
             {!pricesLoading && <span className="pl-1 sm:text-lg">/ month</span>}
-          </div>
+          </div> */}
           <div className="flex flex-col space-y-5 sm:flex-row sm:space-y-0">
             <div className="relative flex items-center w-full text-gray-400 dark:text-white">
               <svg
@@ -190,7 +190,7 @@ const PricingCta = () => {
           </div>
         </div>
 
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
           <Link href="/pricing" passHref>
             <a className="flex items-center py-1 mt-4 text-xs transition-all duration-200 ease-in-out group opacity-80 hover:opacity-100">
               Pay yearly or quarterly{' '}
@@ -200,7 +200,7 @@ const PricingCta = () => {
               />
             </a>
           </Link>
-        </div>
+        </div> */}
       </form>
       {pppCouponAvailable && pppCouponEligible && (
         <ParityCouponMessage

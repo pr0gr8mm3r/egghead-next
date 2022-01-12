@@ -37,8 +37,8 @@ const SearchBar = () => {
                 value={values.query}
                 onChange={handleChange}
                 type="search"
-                aria-label="Search"
-                placeholder="What do you want to learn today?"
+                aria-label="Suchen"
+                placeholder="Was willst du lernen?"
                 autoComplete="off"
                 className="dark:placeholder-opacity-60 placeholder-opacity-60 dark:placeholder-white placeholder-black bg-transparent sm:text-sm text-base sm:w-[230px] w-full h-12 focus:ring-0 border-none p-0"
               />

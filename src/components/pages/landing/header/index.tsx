@@ -15,9 +15,7 @@ const ProvideEmail: React.FC<{topic?: string}> = ({topic}) => (
   <>
     <CreateAccount location="homepage header" />
     <p className="max-w-sm pt-10 text-xs text-center sm:text-sm opacity-60">
-      Enter your email to create an account and start learning from more than
-      3,000 free {title(topic?.replace('_', ' ') ?? 'Full Stack')} lessons on
-      egghead.
+      Registriere dich, um deinen Fortschritt zu speichern.
     </p>
   </>
 )
@@ -72,18 +70,16 @@ const Header: React.FC<{topic?: string; customer?: any}> = ({
         />
         <div className="relative z-10 flex flex-col items-center justify-center max-w-screen-lg pb-8">
           <h1 className="text-2xl font-bold text-center lg:text-4xl sm:text-3xl leading-tighter sm:max-w-[22ch] tracking-tight">
-            Concise {title(topic?.replace('_', ' ') ?? 'Full Stack')} Courses
-            for Busy Web Developers
+            Schulungen, Kurse und Tutorials vom SWDEC
           </h1>
           <h2 className="pt-3 pb-10 text-center text-blue-500 dark:text-amber-400 lg:text-lg sm:text-base text-sm leading-tight">
-            high-quality video tutorials and curated learning resources with
-            zero cruft
+            bequem von zuhause aus
           </h2>
           <Offer topic={topic} />
         </div>
-        <div className="sm:absolute bottom-10">
+        {/* <div className="sm:absolute bottom-10">
           <TechLogos />
-        </div>
+        </div> */}
       </div>
     </header>
   )

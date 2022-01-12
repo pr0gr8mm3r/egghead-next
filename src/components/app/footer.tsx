@@ -12,47 +12,22 @@ import useCio from 'hooks/use-cio'
 const content = [
   {
     path: '/q',
-    label: 'Search',
-  },
-  {
-    path: '/blog',
-    label: 'Articles',
-  },
-  {
-    path: '/talks',
-    label: 'Talks',
-  },
-  {
-    path: '/podcasts',
-    label: 'Podcasts',
+    label: 'Suchen',
   },
   {
     path: '/topics',
-    label: 'Topics',
+    label: 'Themen',
   },
   {
     path: '/site-directory',
-    label: 'Machine',
+    label: 'Seitenverzeichnis',
   },
 ]
 
 const about = [
   {
-    path: '/pricing',
-    label: 'Pricing',
-    nonMemberRequired: true,
-  },
-  {
-    path: 'https://store.egghead.io/',
-    label: 'Store',
-  },
-  {
-    path: 'mailto:support@egghead.io',
-    label: 'support@egghead.io',
-  },
-  {
     path: '/logout',
-    label: 'Log Out',
+    label: 'Ausloggen',
     viewerRequired: true,
   },
 ]
@@ -96,8 +71,7 @@ const FooterNavigation: FunctionComponent = () => {
               <Image src={Eggo} alt="egghead.io logo" />
             </div>
             <div className="mt-1 text-lg font-semibold tracking-tight leading-tighter">
-              Build your Developer Portfolio and climb the engineering career
-              ladder.
+              Schulungen. Bequem von zuhause aus.
             </div>
           </a>
         </Link>
@@ -174,7 +148,7 @@ const DarkModeToggle = () => {
   return (
     <div className="flex items-center justify-between">
       <h2 className="mr-3">
-        {isMounted && (resolvedTheme === 'dark' ? 'Dark' : 'Light')} Mode
+        {isMounted && (resolvedTheme === 'dark' ? 'Dunkler' : 'Heller')} Modus
       </h2>
       <div
         className="flex-shrink-0 w-16 h-10 p-1 bg-gray-300 rounded-full dark:bg-gray-1000"

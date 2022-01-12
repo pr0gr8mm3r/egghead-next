@@ -89,9 +89,8 @@ const Header: FunctionComponent = () => {
     return (
       <Link href="/">
         <a className="flex items-center pr-2">
-          <Eggo className="mr-1 sm:w-8 w-7" />
           <span className="inline-block text-base font-semibold sm:text-lg">
-            egghead.io
+            SWDEC
           </span>
         </a>
       </Link>
@@ -182,7 +181,7 @@ const Header: FunctionComponent = () => {
             }
             className="flex items-center h-full px-2 dark:hover:bg-white hover:bg-gray-50 dark:hover:bg-opacity-5"
           >
-            Sign in
+            Einloggen
           </a>
         </Link>
       </div>
@@ -206,7 +205,7 @@ const Header: FunctionComponent = () => {
             </li>
           ) : null
         })}
-        <li>{activeCTA}</li>
+        {/* <li>{activeCTA}</li> */}
       </ul>
     )
   }
@@ -234,7 +233,7 @@ const Header: FunctionComponent = () => {
                   {!isEmpty(viewer) && <Bookmarks />}
                   {!isEmpty(viewer) && <Feedback />}
                   {showTeamNavLink && <Team />}
-                  <div className="flex items-center px-1">{activeCTA}</div>
+                  {/* <div className="flex items-center px-1">{activeCTA}</div> */}
                   {!isEmpty(viewer) && <User />}
                   {isEmpty(viewer) && <Login />}
                 </>
@@ -271,110 +270,26 @@ const Browse: React.FC<any> = ({viewer}) => {
   const {subscriber} = useCio()
   const browse = [
     {
-      name: 'React',
+      name: 'KJS',
       href: '/q/react',
       image:
         'https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/026/square_64/react.png',
     },
     {
-      name: 'JavaScript',
+      name: 'Subsite',
       href: '/q/javascript',
       image:
         'https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/205/square_64/javascriptlang.png',
     },
-    {
-      name: 'Angular',
-      href: '/q/angular',
-      image:
-        'https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/300/square_64/angular2.png',
-    },
-    {
-      name: 'CSS',
-      href: '/q/css',
-      image:
-        'https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/175/square_64/csslang.png',
-    },
-    {
-      name: 'TypeScript',
-      href: '/q/typescript',
-      image:
-        'https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/377/square_64/typescriptlang.png',
-    },
-    {
-      name: 'AWS',
-      href: '/q/aws',
-      image:
-        'https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/090/square_64/aws.png',
-    },
-    {
-      name: 'Node.js',
-      href: '/q/node',
-      image:
-        'https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/256/square_64/nodejslogo.png',
-    },
-    {
-      name: 'Next.js',
-      href: '/q/next',
-      image:
-        'https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/074/square_64/nextjs.png',
-    },
-    {
-      name: 'Docker',
-      href: '/q/docker',
-      image:
-        'https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/947/square_64/docker%282%29.png',
-    },
-    {
-      name: 'Vue.js',
-      href: '/q/vue',
-      image:
-        'https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/036/square_64/vue.png',
-    },
-    {
-      name: 'ReactNative',
-      href: '/q/react-native',
-      image:
-        'https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/969/square_64/reactnativelogo.png',
-    },
-    {
-      name: 'Algolia',
-      href: '/q/algolia',
-      image:
-        'https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/230/square_64/aloglia_logo_1000x1000.png',
-    },
-    {
-      name: 'Python',
-      href: '/q/python',
-      image:
-        'https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/138/square_64/2000px-Python-logo-notext.svg.png',
-    },
-    {
-      name: 'Go',
-      href: '/q/go',
-      image:
-        'https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/247/square_64/go_logo.png',
-    },
   ]
-  const contentSectionLinks = [
-    {name: 'Articles', href: '/blog', icon: DocumentTextIcon},
-    {
-      name: 'Podcasts',
-      href: '/q?type=podcast',
-      icon: MicrophoneIcon,
-    },
-    {
-      name: 'Talks',
-      href: '/q?type=talk',
-      icon: PresentationChartBarIcon,
-    },
-  ]
+  const contentSectionLinks = []
 
   return (
     <Popover>
       {({open, close}) => (
         <>
           <Popover.Button className="flex items-center h-full px-3 dark:hover:bg-white hover:bg-gray-50 dark:hover:bg-opacity-5">
-            <span>Browse</span>
+            <span>Entdecken</span>
             <ChevronDownIcon className="h-4 mt-px" aria-hidden="true" />
           </Popover.Button>
           <Transition
@@ -407,10 +322,10 @@ const Browse: React.FC<any> = ({viewer}) => {
                         >
                           <div className="relative z-10">
                             <div className="text-xs font-medium tracking-wide uppercase opacity-80">
-                              start here
+                              Hier loslegen
                             </div>
                             <div className="text-base font-semibold">
-                              Curated Courses{' '}
+                              Ausgewählte Kurse{' '}
                               <span
                                 aria-hidden="true"
                                 className="inline-flex transition group-hover:translate-x-1"
@@ -426,7 +341,7 @@ const Browse: React.FC<any> = ({viewer}) => {
                       </Link>
                     )}
                     <div className="px-5 pt-5 text-xs font-medium tracking-wide uppercase opacity-80">
-                      Topics
+                      Themen
                     </div>
                     <div className="grid grid-cols-2 py-2 lg:grid-cols-4 sm:grid-cols-3">
                       {browse.map((item) => (
@@ -465,7 +380,7 @@ const Browse: React.FC<any> = ({viewer}) => {
                         }
                         className="flex items-center w-full px-5 py-3 font-medium leading-tight transition duration-150 ease-in-out rounded-sm lg:col-span-2 lg:px-5 sm:px-3 group hover:bg-gray-100 dark:hover:bg-gray-900 dark:hover:bg-opacity-40 hover:shadow-smooth"
                       >
-                        Browse all topics{' '}
+                        Alle durchsuchen{' '}
                         <span
                           className="inline-flex pl-1 transition group-hover:translate-x-1"
                           aria-hidden="true"
