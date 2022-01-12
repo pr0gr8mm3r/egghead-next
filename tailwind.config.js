@@ -13,11 +13,6 @@ module.exports = {
   content: ['./src/**/*.{js,ts,tsx,mdx}'],
   theme: {
     colors: {
-      ...defaultTheme.colors,
-      ...colors,
-      transparentLight: 'rgba(255, 255, 255, 0)', // safari fix
-      transparentDark: 'rgba(17, 24, 39, 0)', // safari fix
-      gray: {...colors.coolGray, 1000: '#0A0F19'},
       blue: colors.green,
     },
     container: {
